@@ -2,11 +2,13 @@
 import React from 'react'
 import { render } from 'react-dom'
 
-const App = (
-  <div>Hello React!!!</div>
-)
+// Bootstrap Styling
+import 'bootstrap/dist/css/bootstrap.min.css'
+
+// Imported Components
+import Main from './components/Main'
 
 render(
-  App,
+  <Main />,
   document.getElementById('root')
 )
