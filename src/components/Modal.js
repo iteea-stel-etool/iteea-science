@@ -4,7 +4,7 @@ import { Badge, Button, Modal, ModalHeader, ModalBody, ModalFooter, ListGroup, L
 
 export default ({ modal: { item, display }, toggle }) => (
   <Modal className='modal-dialog modal-lg' isOpen={display} toggle={toggle}>
-    <ModalHeader toggle={toggle}><u>Benchmark:</u> {item['Benchmark']}</ModalHeader>
+    <ModalHeader toggle={toggle}><u>Benchmark:</u> {item['Benchmark']} ({item["Benchmark Id"]})</ModalHeader>
     <ModalBody>
       <u>Suggested Performance Band:</u> <Badge color='secondary' className='mt-1'>{item["Grade Level"]}</Badge>
       <hr className='my-6' />
