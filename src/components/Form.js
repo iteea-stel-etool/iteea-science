@@ -9,7 +9,7 @@ export default ({ setGrade, setBenchmark, setDiscipline }) => {
         <FormGroup row>
           <Label sm={3}>Benchmark:</Label>
           <Col sm={8}>
-            <Input onChange={(e) => setBenchmark(e.target.value)} placeholder="Search For Benchmark..." />
+            <Input onChange={(e) => setBenchmark(e.target.value)} placeholder="Search By Benchmark, Phrase or Keyword (EX: Natural)..." />
           </Col>
         </FormGroup>
       </Col>
