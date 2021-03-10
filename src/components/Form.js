@@ -18,7 +18,7 @@ export default ({ setGrade, setBenchmark, setDiscipline }) => {
           <Label sm={3}>Standards:</Label>
           <Col sm={8}>
             <Input onChange={(e) => setDiscipline(e.target.value)} type="select">
-              <option hidden>Standards</option>
+              <option hidden>All Standards</option>
               <option>All Standards</option>
               <option>STEL-1</option>
               <option>STEL-2</option>

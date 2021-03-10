@@ -30,7 +30,7 @@ const Wrapper = Styled.div`
 export default () => {
   const [grade, setGrade] = useState('All Grades')
   const [benchmark, setBenchmark] = useState('')
-  const [discipline, setDiscipline] = useState('All Disciplines')
+  const [discipline, setDiscipline] = useState('All Standards')
   const [data, setData] = useState(Data)
   const [modal, setModal] = useState({ display: false, item: {} })
 
@@ -44,7 +44,7 @@ export default () => {
         item["Benchmark Detail"].toLocaleLowerCase().includes(benchmark.toLocaleLowerCase()) ||
         item["Benchmark Id"].toLocaleLowerCase().includes(benchmark.toLocaleLowerCase())
       ))
-      .filter(item => discipline === 'All Disciplines' ? true : item["Benchmark Id"].toLocaleLowerCase().includes(discipline.toLocaleLowerCase()))
+      .filter(item => discipline === 'All Standards' ? true : item["Benchmark Id"].toLocaleLowerCase().includes(discipline.replace('-', ' ').toLocaleLowerCase()))
 
     setData(results)
   }, [grade, benchmark, discipline])
