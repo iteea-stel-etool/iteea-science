@@ -9,6 +9,8 @@ export default ({ modal: { display }, toggle }) => {
         <ModalBody>
           <u>ITEAA:</u> <a href="https://www.iteea.org/">Website</a>
           <hr className='my-6' />
+          <a href="https://www.iteea.org/stel.aspx">STEL Information</a>
+          <hr className='my-6' />
           <u>Project Lead:</u> <span>Matthew Swarts (<a href="https://www.linkedin.com/in/matthew-swarts-b517898/">Linkedin</a>)</span>
           <hr className='my-6' />
           <u>Project Lead:</u> <span>Chuchun Tsai (<a href="https://www.linkedin.com/in/chuchuntsai/">Linkedin</a>)</span>

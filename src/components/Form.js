@@ -9,7 +9,7 @@ export default ({ setGrade, setBenchmark, setDiscipline }) => {
         <FormGroup row>
           <Label sm={3}>Search Benchmarks:</Label>
           <Col sm={8}>
-            <Input onChange={(e) => setBenchmark(e.target.value)} placeholder="Search By Benchmark, Phrase or Keyword (EX: 1A)..." />
+            <Input onChange={(e) => setBenchmark(e.target.value)} placeholder="By Benchmark, Phrase or Keyword (EX: 1A)..." />
           </Col>
         </FormGroup>
       </Col>
@@ -37,7 +37,7 @@ export default ({ setGrade, setBenchmark, setDiscipline }) => {
           <Label sm={3}>Grade:</Label>
           <Col sm={8}>
             <Input onChange={(e) => setGrade(e.target.value)} type="select">
-              <option hidden >Choose Grade</option>
+              <option hidden >All Grades</option>
               <option>All Grades</option>
               <option>Pre-K-2</option>
               <option>3-5</option>
