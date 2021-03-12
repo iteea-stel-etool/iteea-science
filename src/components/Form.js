@@ -15,10 +15,10 @@ export default ({ setGrade, setBenchmark, setDiscipline }) => {
       </Col>
       <Col md='4'>
         <FormGroup row>
-          <Label sm={3}>Standards:</Label>
+          <Label sm={3}>STEL Standards:</Label>
           <Col sm={8}>
             <Input onChange={(e) => setDiscipline(e.target.value)} type="select">
-              <option hidden>STEL Standards</option>
+              <option hidden>All Standards</option>
               <option>All Standards</option>
               <option value="STEL-1">1 - Nature and Characteristics</option>
               <option value="STEL-2">2 - Core Concepts</option>
