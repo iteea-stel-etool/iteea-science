@@ -1,6 +1,6 @@
 // Modal Component
 import React from 'react'
-import { Badge, Button, Modal, ModalHeader, ModalBody, ModalFooter, ListGroup, ListGroupItem, ListGroupItemHeading, ListGroupItemText } from 'reactstrap'
+import { Badge, Button, Modal, ModalHeader, ModalBody, ListGroup, ListGroupItem } from 'reactstrap'
 
 export default ({ modal: { item, display }, toggle }) => (
   <Modal className='modal-dialog modal-lg' isOpen={display} toggle={toggle}>
