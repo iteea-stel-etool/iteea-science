@@ -14,6 +14,8 @@ export default ({ modal: { display }, toggle }) => {
           <u>Project Lead:</u> <span>Chuchun Tsai (<a href="https://www.linkedin.com/in/chuchuntsai/">Linkedin</a>)</span>
           <hr className='my-6' />
           <u>Lead Developer:</u> <span>Robbie McClellan (<a href="https://www.linkedin.com/in/robbie-mcclellan-24ba19a2/">Linkedin</a>)</span>
+          <hr className="my-6" />
+          <div>Copyright (c) 2021 StandardsForTEE</div>
         </ModalBody>
       </Modal>
     </div>
