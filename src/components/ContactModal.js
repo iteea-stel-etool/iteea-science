@@ -7,7 +7,7 @@ export default ({ modal: { display }, toggle }) => {
       <Modal isOpen={display} toggle={toggle}>
         <ModalHeader toggle={toggle}>Contact Information</ModalHeader>
         <ModalBody>
-          <u>ITEAA:</u> <a href="https://www.iteea.org/">Website</a>
+          <u>ITEEA:</u> <a href="https://www.iteea.org/">Website</a>
           <hr className='my-6' />
           <a href="https://www.iteea.org/stel.aspx">STEL Information</a>
           <hr className='my-6' />
