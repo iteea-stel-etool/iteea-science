@@ -27,7 +27,7 @@ export default ({ setGrade, setBenchmark, setDiscipline }) => {
               <option value="STEL-5">5 - Influence of Society</option>
               <option value="STEL-6">6 - History of Technology</option>
               <option value="STEL-7">7 - Design in TEE</option>
-              <option value="STEL-8">8 - Apply, Maintain, Asssess</option>
+              <option value="STEL-8">8 - Apply, Maintain, Assess</option>
             </Input>
           </Col>
         </FormGroup>
