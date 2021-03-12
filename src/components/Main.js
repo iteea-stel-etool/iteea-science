@@ -11,6 +11,7 @@ import Data from './data'
 import Navbar from './Navbar'
 import Card from './Card'
 import Modal from './Modal'
+import Contact from './ContactModal'
 import Form from './Form'
 
 const Wrapper = Styled.div`
@@ -33,8 +34,11 @@ export default () => {
   const [discipline, setDiscipline] = useState('All Standards')
   const [data, setData] = useState(Data)
   const [modal, setModal] = useState({ display: false, item: {} })
+  const [contact, setContact] = useState({ display: false })
 
   const toggle = () => setModal({ display: false, item: {} })
+  const contactToggle = () => setContact({ display: false })
+
 
   useEffect(() => {
     const results = Data
@@ -51,13 +55,14 @@ export default () => {
 
   return (
     <main>
-      <Navbar />
+      <Navbar setContact={setContact} />
       <Wrapper>
         <Form setGrade={setGrade} setBenchmark={setBenchmark} setDiscipline={setDiscipline} />
         <Row>
           {data.map(item => <Card key={uuid()} item={item} setModal={setModal} toggle={toggle} />)}
         </Row>
         <Modal modal={modal} toggle={toggle} />
+        <Contact modal={contact} toggle={contactToggle} />
       </Wrapper>
     </main>
   )
