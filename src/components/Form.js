@@ -20,14 +20,14 @@ export default ({ setGrade, setBenchmark, setDiscipline }) => {
             <Input onChange={(e) => setDiscipline(e.target.value)} type="select">
               <option hidden>STEL Standards</option>
               <option>All Standards</option>
-              <option>STEL-1</option>
-              <option>STEL-2</option>
-              <option>STEL-3</option>
-              <option>STEL-4</option>
-              <option>STEL-5</option>
-              <option>STEL-6</option>
-              <option>STEL-7</option>
-              <option>STEL-8</option>
+              <option value="STEL-1">1 - Nature and Characteristics</option>
+              <option value="STEL-2">2 - Core Concepts</option>
+              <option value="STEL-3">3 - Integration of Knowledge</option>
+              <option value="STEL-4">4 - Impact of Technology</option>
+              <option value="STEL-5">5 - Influence of Society</option>
+              <option value="STEL-6">6 - History of Technology</option>
+              <option value="STEL-7">7 - Design in TEE</option>
+              <option value="STEL-8">8 - Apply, Maintain, Asssess</option>
             </Input>
           </Col>
         </FormGroup>
