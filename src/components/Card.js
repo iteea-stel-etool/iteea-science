@@ -14,7 +14,7 @@ export default ({ item, setModal }) => (
   <Col md='4' className='mb-4'>
     <Card>
       <CardBody>
-        <CardTitle><u>Benchmark:</u> {item["Benchmark"]} : ({item["Benchmark Id"].split(" ")[1]})</CardTitle>
+        <CardTitle><u>Benchmark:</u> {"STEL-" + item["Benchmark Id"].split(" ")[1]} - {item["Benchmark"]}</CardTitle>
         <hr className='my-2' />
         <CardText><u>Grade:</u> <Badge color='secondary'>{item["Grade Level"]}</Badge></CardText>
         <hr className='my-2' />

@@ -53,7 +53,7 @@ export default ({ modal: { item, display }, toggle }) => {
             Collaboration: {item["Collaboration"]}
           </ListGroupItem>
           <ListGroupItem>
-            Communication {item["Communication"]}
+            Communication: {item["Communication"]}
           </ListGroupItem>
           <ListGroupItem>
             Ethics: {item["Ethics"]}
