@@ -57,7 +57,7 @@ const Main = () => {
     <main>
       <Navbar setContact={setContact} />
       <Wrapper>
-        <Form setGrade={setGrade} setBenchmark={setBenchmark} setDiscipline={setDiscipline} />
+        {/* <Form setGrade={setGrade} setBenchmark={setBenchmark} setDiscipline={setDiscipline} /> */}
         <Row>
           {data.map(item => <Card key={uuid()} item={item} setModal={setModal} toggle={toggle} />)}
         </Row>
