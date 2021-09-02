@@ -1,8 +1,8 @@
 // Form Component
 import React from 'react';
-import { Col, FormGroup, Label, Input, FormText, Row } from 'reactstrap';
+import { Col, FormGroup, Label, Input, Row } from 'reactstrap';
 
-export default ({ setGrade, setBenchmark, setDiscipline }) => {
+const Form = ({ setGrade, setBenchmark, setDiscipline }) => {
   return (
     <Row>
       <Col md='4'>
@@ -50,3 +50,5 @@ export default ({ setGrade, setBenchmark, setDiscipline }) => {
     </Row>
   );
 }
+
+export default Form

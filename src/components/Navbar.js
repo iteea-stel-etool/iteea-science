@@ -2,7 +2,7 @@
 import React, { Fragment } from 'react'
 import { Button, Navbar, NavbarBrand, NavbarText } from 'reactstrap'
 
-export default ({ setContact }) => (
+const MainNavbar =  ({ setContact }) => (
   <Fragment>
     <Navbar color='dark' dark expand='md' style={{ justifyContent: 'space-between' }}>
       <NavbarBrand href='/'>ITEEA STEL eTool</NavbarBrand>
@@ -10,3 +10,5 @@ export default ({ setContact }) => (
     </Navbar>
   </Fragment>
 )
+
+export default MainNavbar

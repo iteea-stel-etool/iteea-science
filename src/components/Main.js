@@ -5,7 +5,7 @@ import { Row } from 'reactstrap'
 import { v4 as uuid } from 'uuid'
 
 // Data Import
-import Data from './data'
+import Data from './science'
 
 // Imported Components
 import Navbar from './Navbar'
@@ -28,7 +28,7 @@ const Wrapper = Styled.div`
   }
 `
 
-export default () => {
+const Main = () => {
   const [grade, setGrade] = useState('All Grades')
   const [benchmark, setBenchmark] = useState('')
   const [discipline, setDiscipline] = useState('All Standards')
@@ -67,3 +67,5 @@ export default () => {
     </main>
   )
 }
+
+export default Main

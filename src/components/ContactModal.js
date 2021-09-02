@@ -1,7 +1,7 @@
 import React from 'react';
-import { Badge, Modal, ModalBody, ModalHeader } from 'reactstrap';
+import { Modal, ModalBody, ModalHeader } from 'reactstrap';
 
-export default ({ modal: { display }, toggle }) => {
+const ContactModal = ({ modal: { display }, toggle }) => {
   return (
     <div>
       <Modal isOpen={display} toggle={toggle}>
@@ -25,3 +25,5 @@ export default ({ modal: { display }, toggle }) => {
     </div>
   )
 }
+
+export default ContactModal

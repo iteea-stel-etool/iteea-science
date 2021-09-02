@@ -10,19 +10,21 @@ import {
   Col
 } from 'reactstrap'
 
-export default ({ item, setModal }) => (
+const MainCard = ({ item, setModal }) => (
   <Col md='4' className='mb-4'>
     <Card>
       <CardBody>
-        <CardTitle><u>Benchmark:</u> {"STEL-" + item["Benchmark Id"].split(" ")[1]} - {item["Benchmark"]}</CardTitle>
+        <CardTitle><u>Domain:</u> {item["DCI Code"] + " - " + item["Domain"]}</CardTitle>
         <hr className='my-2' />
-        <CardText><u>Grade:</u> <Badge color='secondary'>{item["Grade Level"]}</Badge></CardText>
+        <CardText><u>Grade:</u> <Badge color='secondary'>{item["Grade Band"]}</Badge></CardText>
         <hr className='my-2' />
-        <CardText><u>Description:</u> {item["Benchmark Detail"]}</CardText>
+        <CardText><u>Description:</u> {item["Topic"]}</CardText>
         <hr className='my-2' />
-        <CardText>{item["Disciplinary Standard"]}</CardText>
+        <CardText>{item["Disciplinary Core Ideas (DCI)"]}</CardText>
         <Button onClick={() => setModal({ display: true, item: item })} color='secondary' size='sm' outline>View</Button>
       </CardBody>
     </Card>
   </Col>
 )
+
+export default MainCard

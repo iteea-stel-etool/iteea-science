@@ -1,67 +1,68 @@
 // Modal Component
 import React from 'react'
 import { Badge, Button, Modal, ModalHeader, ModalBody, ListGroup, ListGroupItem } from 'reactstrap'
+import { v4 as uuid } from 'uuid'
 
-export default ({ modal: { item, display }, toggle }) => {
-  let id = ""
+const ModalCard =  ({ modal: { item, display }, toggle }) => {
+  let groups
 
-  if (item["Benchmark Id"] !== undefined) {
-    id = item["Benchmark Id"].split(" ")[1]
+  const practices = item["practices"]
+  const concepts = item["concepts"]
+
+  if(item["practices"]) {
+    groups = (
+      <>
+      <hr className='my-6' />
+        <h6><u>Science and Engineering Practices:</u></h6>
+        <ListGroup flush>
+          {practices.map(practice => (
+            <ListGroupItem key={uuid()}>
+              <u>{practice["title"]}:</u> {practice["info"]}
+            </ListGroupItem>  
+          ))}
+        </ListGroup>
+        <hr className='my-6' />
+        <h6><u>Crosscutting Concepts</u></h6>
+        <ListGroup flush>
+          {concepts.map(practice => (
+            <ListGroupItem key={uuid()}>
+              <u>{practice["title"]}:</u> {practice["info"]}
+            </ListGroupItem>  
+          ))}
+        </ListGroup>
+      </>
+    )
   }
 
   return (
     <Modal className='modal-dialog modal-lg' isOpen={display} toggle={toggle}>
-      <ModalHeader toggle={toggle}><u>Benchmark:</u> {item['Benchmark']} ({id})</ModalHeader>
+      <ModalHeader toggle={toggle}><u>Domain:</u> {item['Domain']} - {item["DCI Code"]}</ModalHeader>
       <ModalBody>
-        <u>Suggested Performance Band:</u> <Badge color='secondary' className='mt-1'>{item["Grade Level"]}</Badge>
+        <u>Grade:</u> <Badge color='secondary' className='mt-1'>{item["Grade Band"]}</Badge>
         <hr className='my-6' />
-        <u>Description:</u> {item["Benchmark Detail"]}
+        <u>Disciplinary Core Ideas (DCI):</u> {item["Disciplinary Core Ideas (DCI)"]}
         <hr className='my-6' />
-        <u>Standard:</u> {item["Disciplinary Standard"]}
+        <u>Title:</u> {item["Title"]}
         <hr className='my-6' />
-        <h6><u>Benchmark Crosswalk:</u></h6>
+        <h6><u>Products:</u></h6>
         <ListGroup flush>
           <ListGroupItem>
-            NGSS (2013): {item["NGSS (2013)"]}
+            Product 1: {item["Product 1:"]}
           </ListGroupItem>
           <ListGroupItem>
-            CCSS MATH: {item["CCSS MATH"]}
+            Product 2: {item["Product 2:"]}
           </ListGroupItem>
           <ListGroupItem>
-            CCSS ELA: {item["CCSS ELA"]}
+            Product 3: {item["Product 3:"]}
           </ListGroupItem>
         </ListGroup>
-        <hr className='my-6' />
-        <h6><u>Practices For {item["Grade Level"]}:</u></h6>
-        <ListGroup flush>
-          <ListGroupItem>
-            System Thinking: {item["System Thinking"]}
-          </ListGroupItem>
-          <ListGroupItem>
-            Creativity: {item["Creativity"]}
-          </ListGroupItem>
-          <ListGroupItem>
-            Making + Doing: {item["Making and Doing"]}
-          </ListGroupItem>
-          <ListGroupItem>
-            Critical Thinking: {item["Critical Thinking"]}
-          </ListGroupItem>
-          <ListGroupItem>
-            Optimism: {item["Optimism"]}
-          </ListGroupItem>
-          <ListGroupItem>
-            Collaboration: {item["Collaboration"]}
-          </ListGroupItem>
-          <ListGroupItem>
-            Communication: {item["Communication"]}
-          </ListGroupItem>
-          <ListGroupItem>
-            Ethics: {item["Ethics"]}
-          </ListGroupItem>
-        </ListGroup>
+        {groups}
+        
         <hr />
         <Button style={{ marginTop: 5 }} onClick={() => toggle()} outline>Close</Button>
       </ModalBody>
     </Modal>
   )
 }
+
+export default ModalCard
